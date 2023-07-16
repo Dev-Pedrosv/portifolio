@@ -25,23 +25,27 @@ export default function Skills({}: Props) {
         Hover over a skill for currency proficiency
       </h3>
 
-      <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+      <div className="grid grid-cols-4 gap-2 md:gap-5 p-4 mt-16">
+        <Skill skill="typescript" />
+        <Skill skill="javascript" />
+        <Skill skill="react" />
+        <Skill skill="next" />
+        <Skill skill="tailwind" />
+        <Skill skill="styledcomponents" />
+        <Skill skill="jest" />
+        <Skill skill="materialui" />
+        <Skill skill="sass" />
+        <Skill skill="nodejs" />
+        <Skill skill="express" />
+        <Skill skill="mongodb" />
+        <Skill skill="sequelize" />
+        <Skill skill="firebase" />
+        <Skill skill="supabase" />
+        <Skill skill="docker" />
+        <Skill skill="azure" />
+        <Skill skill="git" />
+        <Skill skill="figma" />
+        <Skill skill="vercel" />
       </div>
     </motion.div>
   );
