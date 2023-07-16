@@ -29,7 +29,9 @@ export default function Hero({}: Props) {
         <Image
           src="/user-img.jpg"
           alt="Pedro Silva image"
-          objectFit="cover"
+          style={{
+            objectFit: "cover",
+          }}
           fill
         />
       </div>
