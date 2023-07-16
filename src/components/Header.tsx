@@ -25,7 +25,7 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row items-center"
       >
-        <SocialIcon
+        {/* <SocialIcon
           url="https://www.linkedin.com/in/pedroh-dev/"
           fgColor="gray"
           bgColor="transparent"
@@ -39,7 +39,7 @@ export default function Header({}: Props) {
           url="https://www.instagram.com/pedrosilvadev_/"
           fgColor="gray"
           bgColor="transparent"
-        />
+        /> */}
       </motion.div>
 
       <Link href="#contact">
@@ -59,7 +59,7 @@ export default function Header({}: Props) {
           }}
           className="flex flex-row items-center text-gray-300 cursor-pointer"
         >
-          <SocialIcon
+          {/* <SocialIcon
             className="cursor-pointer"
             network="email"
             fgColor="gray"
@@ -67,7 +67,7 @@ export default function Header({}: Props) {
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
-          </p>
+          </p> */}
         </motion.div>
       </Link>
     </header>
