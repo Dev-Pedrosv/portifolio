@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-[#F7AB0A]/80 ">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-primary/80 ">
       <Header />
 
       <section id="hero" className="snap-start">
@@ -38,7 +38,7 @@ export default function Home() {
 
       <footer className="sticky bottom-5 w-full cursor-pointer flex items-center justify-center">
         <Link href="#hero">
-          <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gray-600 hover:bg-[#F7AB0A]/80 transition-all">
+          <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gray-600 hover:bg-primary/80 transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

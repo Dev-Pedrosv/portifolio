@@ -37,7 +37,7 @@ export default function About({}: Props) {
           duration: 1.2,
         }}
         viewport={{ once: true }}
-        className="relative -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full 
+        className="relative -mb-32 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full 
         overflow-hidden md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       >
         <Image
@@ -51,16 +51,22 @@ export default function About({}: Props) {
       </motion.div>
 
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold ">
+        <h4 className="text-2xl font-semibold md:text-4xl">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+          <span className="underline decoration-primary/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-          architecto sit quasi voluptas molestiae maxime officiis id enim est
-          amet nemo expedita laboriosam delectus asperiores magni distinctio
-          ipsa ducimus esse.
+        <p className="text-sm md:text-base">
+          💻 With over 3 years of hands-on experience in software development, I
+          possess a strong background in system development from inception to
+          completion.
+          <br /> 👨‍🏫 Additionally, I have served as an instructor in developer
+          training courses, guiding students through the creation of practical
+          projects.
+          <br />
+          Nowadays, I channel my expertise as a content creator on YouTube 🎥
+          and Instagram 📸, sharing valuable insights and knowledge with a wide
+          audience.
         </p>
       </div>
     </motion.div>
