@@ -2,11 +2,29 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
+import TitleSection from "./TitleSection";
 
 type Props = {};
 
 export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+  const projects = [
+    {
+      name: "Trips App",
+      description:
+        "This project is an application designed to facilitate trip reservations. Users can log in using social login via Google, browse a list of available trips, view trip details, simulate a purchase of a trip, and see their reservations.",
+      link: "https://github.com/Dev-Pedrosv/trips-app",
+      image: "/trips-project.png",
+    },
+    {
+      name: "Translate App",
+      description:
+        "Translate app is an app to help us improve our English skills. You can register a card with a word and its translation in my case into Portuguese. I can see all the cards I have recorded, study and memorize these words.",
+      link: "https://github.com/Dev-Pedrosv/trips-app",
+      image: "/translate-app.png",
+    },
+  ];
 
   return (
     <motion.div
@@ -21,15 +39,13 @@ export default function Projects({}: Props) {
       }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-        Projects
-      </h3>
+      <TitleSection title="Projects" />
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-primary/80">
         {projects.map((project, i) => (
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
-            key={project}
+            key={project.name}
           >
             <motion.img
               initial={{
@@ -39,24 +55,27 @@ export default function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://img1.gratispng.com/20180604/iqs/kisspng-react-javascript-angularjs-ionic-atom-5b154be64e7965.3537065815281223423214.jpg"
-              alt="react logo"
+              src={project.image}
+              alt={project.name}
             />
 
-            <div className="space-y-10 px-10 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-primary/50">
+            <div className="space-y-6 px-10 md:px-10 max-w-6xl">
+              <div className="text-center">
+                <h4 className="text-4xl font-semibold ">{project.name}</h4>
+                <p className="text-xl md:text-2xl underline decoration-primary/50">
                   Case Study {i + 1} of {projects.length}
-                </span>{" "}
-                UPS clone
-              </h4>
+                </p>
+              </div>
 
               <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                maxime accusamus minus labore, recusandae veniam minima sunt,
-                nobis a soluta consectetur, voluptate sint explicabo reiciendis
-                unde. Molestias laudantium illo dolore.
+                {project.description}
               </p>
+              <Link
+                href={project.link}
+                className="text-center w-full block underline text-primary hover:text-white transition-all"
+              >
+                Click to access
+              </Link>
             </div>
           </div>
         ))}
