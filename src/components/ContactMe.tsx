@@ -58,12 +58,14 @@ export default function ContactMe({}: Props) {
               placeholder="Name"
               className="contactInput"
               type="text"
+              required
             />
             <input
               {...register("email")}
               placeholder="Email"
               className="contactInput"
               type="email"
+              required
             />
           </div>
           <input
@@ -71,11 +73,13 @@ export default function ContactMe({}: Props) {
             placeholder="Subject"
             className="contactInput"
             type="text"
+            required
           />
           <textarea
             {...register("message")}
             placeholder="Message"
             className="contactInput"
+            required
           ></textarea>
           <button
             type="submit"
