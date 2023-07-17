@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
-import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { PhoneIcon, MailIcon } from "lucide-react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Link from "next/link";
+import TitleSection from "./TitleSection";
 
 type Props = {};
 
@@ -21,24 +23,27 @@ export default function ContactMe({}: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-        Contact
-      </h3>
+      <TitleSection title="Contact" />
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-4xl font-semibold text-center uppercase">
           I have got just what you need.
-          <span className="underline decoration-primary/50"> Lets Talk.</span>
+          <br />
+          Lets Talk.
         </h4>
 
         <div className="space-y-2">
-          <div className="flex items-center space-x-5 justify-center">
+          <Link
+            href="https://wa.me/5519995728321?text=Hello+Pedro+%21"
+            target="_blank"
+            className="flex items-center space-x-5 justify-center hover:underline hover:decoration-primary/50 hover:text-primary transition-all"
+          >
             <PhoneIcon className="text-primary h-7 w-7 animate-pulse" />
             <p className="text-xl">+55 1999572-8321</p>
-          </div>
+          </Link>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-primary h-7 w-7 animate-pulse" />
+            <MailIcon className="text-primary h-7 w-7 animate-pulse" />
             <p className="text-xl">comercial.pedrosilvadev@gmail.com</p>
           </div>
         </div>

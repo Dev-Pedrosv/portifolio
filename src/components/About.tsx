@@ -57,15 +57,14 @@ export default function About({}: Props) {
         </h4>
         <p className="text-sm md:text-base">
           💻 With over 3 years of hands-on experience in software development, I
-          possess a strong background in system development from inception to
+          have a solid background in systems development from inception to
           completion.
-          <br /> 👨‍🏫 Additionally, I have served as an instructor in developer
-          training courses, guiding students through the creation of practical
-          projects.
+          <br /> 👨‍🏫 In addition, I acted as an instructor in developer training
+          courses, guiding students in creating practical projects.
           <br />
-          Nowadays, I channel my expertise as a content creator on YouTube 🎥
-          and Instagram 📸, sharing valuable insights and knowledge with a wide
-          audience.
+          👨‍💻Nowadays, in addition to working as a software engineer, I channel
+          my experience as a content creator on YouTube 🎥 and Instagram 📸,
+          sharing valuable insights and knowledge with a wide audience.
         </p>
       </div>
     </motion.div>

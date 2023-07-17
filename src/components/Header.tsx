@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
-import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import {
+  LinkedinIcon,
+  MailIcon,
+  YoutubeIcon,
+  InstagramIcon,
+} from "lucide-react";
 
 type Props = {};
 
@@ -23,23 +28,31 @@ export default function Header({}: Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center"
+        className="flex flex-row items-center space-x-3"
       >
-        {/* <SocialIcon
-          url="https://www.linkedin.com/in/pedroh-dev/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.youtube.com/@pedrosilvadev_"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.instagram.com/pedrosilvadev_/"
-          fgColor="gray"
-          bgColor="transparent"
-        /> */}
+        <Link
+          className="text-gray-300 cursor-pointer hover:-mt-2 transition-all hover:text-primary"
+          href="https://www.linkedin.com/in/pedroh-dev/"
+          target="_blank"
+        >
+          <LinkedinIcon />
+        </Link>
+
+        <Link
+          className="text-gray-300 cursor-pointer hover:-mt-2 transition-all hover:text-primary"
+          href="https://www.youtube.com/@pedrosilvadev_"
+          target="_blank"
+        >
+          <YoutubeIcon />
+        </Link>
+
+        <Link
+          className="text-gray-300 cursor-pointer hover:-mt-2 transition-all hover:text-primary"
+          href="https://www.instagram.com/pedrosilvadev_/"
+          target="_blank"
+        >
+          <InstagramIcon />
+        </Link>
       </motion.div>
 
       <Link href="#contact">
@@ -57,17 +70,12 @@ export default function Header({}: Props) {
           transition={{
             duration: 1.5,
           }}
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
+          className="flex flex-row items-center gap-2"
         >
-          {/* <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-          />
+          <MailIcon className="text-gray-300 cursor-pointer hover:-mt-2 transition-all hover:text-primary" />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
             Get In Touch
-          </p> */}
+          </p>
         </motion.div>
       </Link>
     </header>

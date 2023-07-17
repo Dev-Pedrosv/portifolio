@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import TitleSection from "./TitleSection";
 
 type Props = {};
