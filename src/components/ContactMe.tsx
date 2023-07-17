@@ -45,9 +45,9 @@ export default function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fill mx-auto"
+          className="flex flex-col space-y-2 w-full mx-auto p-4"
         >
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 justify-between">
             <input
               {...register("name")}
               placeholder="Name"
@@ -74,7 +74,7 @@ export default function ContactMe({}: Props) {
           ></textarea>
           <button
             type="submit"
-            className="bg-primary py-3 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-primary py-3 px-10 rounded-md text-black font-bold text-lg w-full"
           >
             Submit
           </button>
