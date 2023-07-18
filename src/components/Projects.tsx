@@ -40,10 +40,10 @@ export default function Projects({}: Props) {
     >
       <TitleSection title="Projects" />
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-primary/80">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-zinc-700">
         {projects.map((project, i) => (
           <div
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-4 md:p-44 h-screen"
             key={project.name}
           >
             <motion.img
@@ -56,9 +56,10 @@ export default function Projects({}: Props) {
               viewport={{ once: true }}
               src={project.image}
               alt={project.name}
+              className="max-w-[250px] md:max-w-[450px]"
             />
 
-            <div className="space-y-6 px-10 md:px-10 max-w-6xl">
+            <div className="space-y-6 px-4 md:px-10 max-w-6xl">
               <div className="text-center">
                 <h4 className="text-4xl font-semibold ">{project.name}</h4>
                 <p className="text-xl md:text-2xl underline decoration-primary/50">
@@ -66,9 +67,7 @@ export default function Projects({}: Props) {
                 </p>
               </div>
 
-              <p className="text-lg text-center md:text-left">
-                {project.description}
-              </p>
+              <p className="text-lg text-center">{project.description}</p>
               <Link
                 href={project.link}
                 className="text-center w-full block underline text-primary hover:text-white transition-all"

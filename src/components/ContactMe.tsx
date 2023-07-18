@@ -22,11 +22,11 @@ export default function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-2 justify-evenly mx-auto items-center">
       <TitleSection title="Contact" />
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center uppercase">
+      <div className="flex flex-col space-y-10 w-full">
+        <h4 className="text-xl md:text-4xl font-semibold text-center uppercase">
           I have got just what you need.
           <br />
           Lets Talk.
@@ -36,15 +36,15 @@ export default function ContactMe({}: Props) {
           <Link
             href="https://wa.me/5519995728321?text=Hello+Pedro+%21"
             target="_blank"
-            className="flex items-center space-x-5 justify-center hover:underline hover:decoration-primary/50 hover:text-primary transition-all"
+            className="flex items-center space-x-2 md:space-x-5 justify-center hover:underline hover:decoration-primary/50 hover:text-primary transition-all"
           >
             <PhoneIcon className="text-primary h-7 w-7 animate-pulse" />
-            <p className="text-xl">+55 1999572-8321</p>
+            <p className="text-base md:text-xl">+55 1999572-8321</p>
           </Link>
 
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-2 md:space-x-5 justify-center">
             <MailIcon className="text-primary h-7 w-7 animate-pulse" />
-            <p className="text-xl">comercial.pedrosilvadev@gmail.com</p>
+            <p className="text-base md:text-xl">comercial.pedrosilvadev@gmail.com</p>
           </div>
         </div>
 

@@ -112,7 +112,7 @@ export default function WorkExperience({}: Props) {
     >
       <TitleSection title="Experience" />
 
-      <div className="w-full h-[85%] md:h-[80%] flex space-x-5 overflow-x-scroll p-3 md:p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-900/20 scrollbar-thumb-primary/80">
+      <div className="w-full h-[85%] md:h-[80%] flex space-x-5 overflow-x-scroll p-3 md:p-10 snap-x snap-mandatory scrollbar  scrollbar-track-gray-900/20 scrollbar-thumb-zinc-700">
         {works.map((work) => (
           <ExperienceCard key={work.company} work={work} />
         ))}
