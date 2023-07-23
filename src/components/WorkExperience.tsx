@@ -2,9 +2,17 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import { Work } from "@/types/word";
+
 import ExperienceCard from "./ExperienceCard";
 import TitleSection from "./TitleSection";
-import { Work } from "@/types/word";
+import ButtonSwipper from "./ButtonSwipper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 type Props = {};
 
@@ -99,24 +107,49 @@ export default function WorkExperience({}: Props) {
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      className="h-screen relative p-4 pb-20 md:px-10 md:pb-10 justify-end flex overflow-hidden flex-col text-left md:flex-row max-w-full md:justify-evenly mx-auto items-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen flex relative overflow-hidden flex-col text-left w-full px-4 md:px-[54px] justify-center mx-auto items-center max-w-[1340px]"
     >
       <TitleSection title="Experience" />
 
-      <div className="w-full h-[85%] md:h-[80%] flex space-x-5 overflow-x-scroll p-3 md:p-10 snap-x snap-mandatory scrollbar  scrollbar-track-gray-900/20 scrollbar-thumb-zinc-700">
-        {works.map((work) => (
-          <ExperienceCard key={work.company} work={work} />
-        ))}
+      <div className="relative w-full max-w-[1340px] flex h-full justify-center items-center mt-10">
+        <Swiper
+            pagination={{
+              type: "progressbar",
+              clickable: true,
+              bulletClass: "swiper-pagination-bullet-secundary",
+              bulletActiveClass: "swiper-pagination-bullet-active-secundary",
+            }}
+            navigation={{
+              nextEl: "#swiper-button-next-experience",
+              prevEl: "#swiper-button-prev-experience",
+            }}
+            modules={[Pagination, Navigation]}
+            className="w-full"
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                spaceBetween: 30,
+              },
+            }}
+          >
+          {works?.map((work) => (
+            <SwiperSlide key={work.company} className="mt-6 md:mt-0">
+              <ExperienceCard work={work} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="hidden md:inline-flex absolute justify-between w-full max-w-[1235px] top-0 bottom-0 h-0 m-auto">
+          <ButtonSwipper/>
+        </div>
       </div>
+
+      
     </motion.div>
   );
 }

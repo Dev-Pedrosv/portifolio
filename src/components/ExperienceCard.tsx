@@ -9,7 +9,10 @@ type Props = {
 
 export default function ExperienceCard({ work }: Props) {
   return (
-    <article className="flex flex-col rounded-lg p-4 px-6 items-center space-y-4 flex-shrink-0 w-full md:w-[600px] xl:w-[900px] snap-center bg-[#292929] md:p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar  scrollbar-track-gray-900/20 scrollbar-thumb-zinc-700 ">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
+    w-full snap-center bg-[#262626] p-5 hover:opacity-100
+    sm:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden max-h-[620px] overflow-y-scroll "
+    >
       <motion.div
         initial={{
           y: -100,
@@ -25,11 +28,9 @@ export default function ExperienceCard({ work }: Props) {
         viewport={{
           once: true,
         }}
-        className="flex-col md:flex-row items-center md:items-start flex w-full gap-4 md:gap-10
-        "
       >
         <img
-          className="relative rounded-full h-24 w-24 object-cover object-center xl:w-[120px] xl:h-[120px]"
+          className="w-32 h-32 rounded-full object-cover object-center block mx-auto mb-4"
           src={work.image}
           alt={work.company}
           style={{
@@ -63,7 +64,7 @@ export default function ExperienceCard({ work }: Props) {
               <p className="mb-4 text-base font-semibold">
                 Example of results:
               </p>
-              <ul className="list-disc space-y-2 ml-5 text-base md:text-lg ">
+              <ul className="list-disc space-y-2 ml-5 text-sm md:text-lg ">
                 {work.results.map((result) => (
                   <li key={result}>{result}</li>
                 ))}
