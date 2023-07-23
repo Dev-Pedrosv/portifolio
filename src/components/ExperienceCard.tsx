@@ -11,7 +11,7 @@ export default function ExperienceCard({ work }: Props) {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
     w-full snap-center bg-[#262626] p-5 hover:opacity-100
-    sm:opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden max-h-[620px] overflow-y-scroll "
+    sm:opacity-40 cursor-pointer transition-opacity duration-200 max-h-[620px] overflow-y-scroll md:overflow-y-clip"
     >
       <motion.div
         initial={{
