@@ -1,0 +1,58 @@
+.swiper-pagination-progressbar.swiper-pagination-horizontal{
+  bottom: 0;
+  top: unset !important;
+}
+
+@media (max-width: 767px) {
+  .swiper-pagination-progressbar.swiper-pagination-horizontal{
+      bottom: 0 !important;
+      top: unset !important;
+  }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: #F7AB0A !important;
+}
+
+.swiper-button-prev{
+  color: #F7AB0A !important;
+  left: 0 !important;
+}
+
+.swiper-button-next{
+  color: #F7AB0A !important;
+  right: 0 !important;
+}
+
+#swiper-button-prev-experience {
+  position: absolute;
+  top : 25px;
+  left: 0;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #F7AB0A;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#swiper-button-next-experience {
+  position: absolute;
+  top : 25px;
+  right: 0;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: #F7AB0A;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+
+}
