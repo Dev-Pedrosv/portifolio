@@ -10,7 +10,7 @@ export default function Skill({ skill }: Props) {
       <img
         src={`https://skillicons.dev/icons?i=${skill}`}
         alt="react logo"
-        className="w-24 h-24"
+        className="w-20 h-1w-20"
       />
     </div>
   );

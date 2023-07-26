@@ -1,11 +1,14 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  next: string;
+  prev: string;
+};
 
-function ButtonSwipper({}: Props) {
+function ButtonSwipper({prev, next}: Props) {
   return (
     <>
-      <div id={`swiper-button-prev-experience`}>
+      <div id={prev} className="swiper-button-prev-experience">
         <svg
           width="16"
           height="16"
@@ -20,7 +23,7 @@ function ButtonSwipper({}: Props) {
         </svg>
       </div>
 
-      <div id={`swiper-button-next-experience`}>
+      <div id={next} className="swiper-button-next-experience">
         <svg
           width="16"
           height="16"

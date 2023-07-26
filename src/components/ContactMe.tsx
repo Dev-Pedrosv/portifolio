@@ -22,10 +22,10 @@ export default function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-2 justify-evenly mx-auto items-center">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-2 justify-center mx-auto items-center">
       <TitleSection title="Contact" />
 
-      <div className="flex flex-col space-y-10 w-full">
+      <div className="flex flex-col space-y-10 w-full mt-20">
         <h4 className="text-xl md:text-4xl font-semibold text-center uppercase">
           I have got just what you need.
           <br />
@@ -50,7 +50,7 @@ export default function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-full mx-auto p-4"
+          className="flex flex-col space-y-2 w-full mx-auto p-4 max-w-[520px]"
         >
           <div className="flex space-x-2 justify-between">
             <input

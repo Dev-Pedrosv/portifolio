@@ -36,7 +36,7 @@ export default function Home() {
         <ContactMe />
       </section>
 
-      <footer className="sticky bottom-5 w-full cursor-pointer flex items-center justify-center">
+      <footer className="sticky bottom-10 w-full cursor-pointer flex items-center justify-center">
         <Link href="#hero">
           <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gray-600 hover:bg-primary/80 transition-all">
             <svg

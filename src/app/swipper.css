@@ -24,7 +24,7 @@
   right: 0 !important;
 }
 
-#swiper-button-prev-experience {
+.swiper-button-prev-experience {
   position: absolute;
   top : 25px;
   left: 0;
@@ -40,7 +40,7 @@
   z-index: 999;
 }
 
-#swiper-button-next-experience {
+.swiper-button-next-experience {
   position: absolute;
   top : 25px;
   right: 0;

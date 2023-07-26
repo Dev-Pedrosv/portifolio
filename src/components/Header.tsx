@@ -7,6 +7,7 @@ import {
   MailIcon,
   YoutubeIcon,
   InstagramIcon,
+  GithubIcon
 } from "lucide-react";
 
 type Props = {};
@@ -52,6 +53,13 @@ export default function Header({}: Props) {
           target="_blank"
         >
           <InstagramIcon />
+        </Link>
+        <Link
+          className="text-gray-300 cursor-pointer hover:-mt-2 transition-all hover:text-primary"
+          href="https://github.com/Dev-Pedrosv"
+          target="_blank"
+        >
+          <GithubIcon />
         </Link>
       </motion.div>
 

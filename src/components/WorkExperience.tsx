@@ -145,7 +145,7 @@ export default function WorkExperience({}: Props) {
           ))}
         </Swiper>
         <div className="hidden md:inline-flex absolute justify-between w-full max-w-[1235px] top-0 bottom-0 h-0 m-auto">
-          <ButtonSwipper/>
+          <ButtonSwipper next="swiper-button-next-experience" prev="swiper-button-prev-experience"/>
         </div>
       </div>
 

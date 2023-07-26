@@ -65,8 +65,8 @@ export default function Projects({}: Props) {
               bulletActiveClass: "swiper-pagination-bullet-active-secundary",
             }}
             navigation={{
-              nextEl: "#swiper-button-next-experience",
-              prevEl: "#swiper-button-prev-experience",
+              nextEl: "#swiper-button-next-experience-proj",
+              prevEl: "#swiper-button-prev-experience-proj",
             }}
             modules={[Pagination, Navigation]}
             className="w-full"
@@ -122,7 +122,7 @@ export default function Projects({}: Props) {
           ))}
         </Swiper>
         <div className="hidden md:inline-flex absolute justify-between w-full max-w-[1235px] top-0 bottom-0 h-0 m-auto">
-          <ButtonSwipper/>
+          <ButtonSwipper next="swiper-button-next-experience-proj" prev="swiper-button-prev-experience-proj"/>
         </div>
       </div>
       
