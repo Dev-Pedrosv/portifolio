@@ -29,7 +29,7 @@ export default function Projects({}: Props) {
       name: "Translate App",
       description:
         "This project is an application to help us improve our English skills. You can register a card with a word and its translation in my case into Portuguese. I can see all the cards I have recorded, study and memorize these words.",
-      link: "https://github.com/Dev-Pedrosv/trips-app",
+      link: "https://github.com/Dev-Pedrosv/translate-app",
       image: "/translate-app.png",
     },
     {
