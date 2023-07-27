@@ -52,19 +52,17 @@ export default function About({}: Props) {
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-2xl font-semibold md:text-4xl">
           Here is a{" "}
-          <span className="underline decoration-primary/50">little</span>{" "}
+          <span className="underline text-primary/50 uppercase decoration-primary/50">little</span>{" "}
           background
         </h4>
         <p className="text-sm md:text-base">
-          💻 With over 3 years of hands-on experience in software development, I
-          have a solid background in systems development from inception to
-          completion.
-          <br /> 👨‍🏫 In addition, I acted as an instructor in developer training
-          courses, guiding students in creating practical projects.
+          💻 With more than 3 years of experience in software development, I started my journey making robots for traders as a freelancer.
           <br />
-          👨‍💻Nowadays, in addition to working as a software engineer, I channel
-          my experience as a content creator on YouTube 🎥 and Instagram 📸,
-          sharing valuable insights and knowledge with a wide audience.
+          👨‍💻Today, in addition to working as a software engineer, I use my experience to share insights and knowledge by creating content on YouTube 🎥 and Instagram 📸.
+          <br />
+          👨‍🏫 In addition, I acted as an instructor in developer training courses, guiding students in the creation of practical projects.
+          <br />
+          🕹️ In my free time I play league of legends and I try to improve my skills, I also really like going to the gym to take care of my health.
         </p>
       </div>
     </motion.div>
