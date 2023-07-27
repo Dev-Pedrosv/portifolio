@@ -1,3 +1,4 @@
+import ToastProvider from "@/providers/toast";
 import "./globals.css";
 import "./swipper.css";
 import type { Metadata } from "next";
@@ -20,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ToastProvider>{children}</ToastProvider>
+      </body>
     </html>
   );
 }

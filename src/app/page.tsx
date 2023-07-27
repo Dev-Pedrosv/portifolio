@@ -1,11 +1,11 @@
 import About from "@/components/About";
 import ContactMe from "@/components/ContactMe";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import WorkExperience from "@/components/WorkExperience";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,27 +35,7 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
-
-      <footer className="sticky bottom-10 w-full cursor-pointer flex items-center justify-center">
-        <Link href="#hero">
-          <div className="flex items-center justify-center h-10 w-10 rounded-full bg-gray-600 hover:bg-primary/80 transition-all">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
-              />
-            </svg>
-          </div>
-        </Link>
-      </footer>
+      <Footer/>
     </div>
   );
 }

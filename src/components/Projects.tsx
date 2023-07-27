@@ -112,6 +112,7 @@ export default function Projects({}: Props) {
                   <p className="text-base md:text-lg text-center">{project.description}</p>
                   <Link
                     href={project.link}
+                    target="_blank"
                     className="text-center w-full block underline text-primary hover:text-white transition-all"
                   >
                     Click to access
