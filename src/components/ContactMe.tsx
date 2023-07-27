@@ -1,24 +1,30 @@
 "use client";
 
-import React from "react";
-import { PhoneIcon, MailIcon } from "lucide-react";
+import React, { useState } from "react";
+import { PhoneIcon, MailIcon, Loader2 } from "lucide-react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Link from "next/link";
 import TitleSection from "./TitleSection";
+import { ContactProps, sendContactForm } from "@/lib/api";
+import { toast } from 'react-toastify'
 
-type Props = {};
+export default function ContactMe() {
 
-interface Inputs {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+  const { register, handleSubmit, formState: {errors}, reset } = useForm<ContactProps>();
+  const [isLoading, setIsLoading] = useState(false)
 
-export default function ContactMe({}: Props) {
-  const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:comercial.pedrosilvadev@gmail.com?subject=${formData.subject}&body="Hi, my name is ${formData.name}, ${formData.message} (${formData.email})`;
+  const onSubmit: SubmitHandler<ContactProps> = async (formData) => {
+    try {
+      setIsLoading(true)
+      await sendContactForm(formData)
+      toast.success('Email enviado com sucesso.')
+      reset()
+    }catch (e) {
+      console.log(e);
+      toast.error('Erro ao enviar email, tente novamente.')
+    } finally {
+      setIsLoading(false)
+    }
   };
 
   return (
@@ -50,42 +56,74 @@ export default function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-full mx-auto p-4 max-w-[520px]"
+          className="flex flex-col space-y-4 w-full mx-auto p-4 max-w-[520px]"
         >
           <div className="flex space-x-2 justify-between">
-            <input
-              {...register("name")}
-              placeholder="Name"
-              className="contactInput"
-              type="text"
-              required
-            />
-            <input
-              {...register("email")}
-              placeholder="Email"
-              className="contactInput"
-              type="email"
-              required
-            />
+            <div>
+              <input
+                {...register('name', {
+                  required: {
+                    value: true,
+                    message: 'Name is required.',
+                  },
+                })}
+                placeholder="Name"
+                type="text"
+                className="contactInput data-[error=true]:border-red-500"
+                data-error={!!errors.name}
+              />
+              <span className="text-xs text-start text-red-300 my-2 block">{errors.name?.message}</span>
+            </div>
+            <div>
+              <input
+                {...register('email', {
+                  required: {
+                    value: true,
+                    message: 'Email is required.',
+                  },
+                })}
+                placeholder="Email"
+                className="contactInput data-[error=true]:border-red-500"
+                type="email"
+                data-error={!!errors.email}
+              />
+              <span className="text-xs text-start text-red-300 my-2 block">{errors.email?.message}</span>
+            </div>
           </div>
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-            required
-          />
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contactInput"
-            required
-          ></textarea>
+          <div>
+            <input
+              {...register('subject', {
+                required: {
+                  value: true,
+                  message: 'Subject is required.',
+                },
+              })}
+              placeholder="Subject"
+              className="contactInput data-[error=true]:border-red-500"
+              type="text"
+              data-error={!!errors.subject}
+            />
+            <span className="text-xs text-start text-red-300 my-2 block">{errors.subject?.message}</span>
+          </div>
+          <div>
+            <textarea
+              {...register('message', {
+                required: {
+                  value: true,
+                  message: 'Message is required.',
+                },
+              })}
+              placeholder="Message"
+              className="contactInput data-[error=true]:border-red-500"
+              data-error={!!errors.message}
+            ></textarea>
+            <span className="text-xs text-start text-red-300 mt-[-2px] block">{errors.message?.message}</span>
+          </div>
           <button
             type="submit"
-            className="bg-primary py-3 px-10 rounded-md text-black font-bold text-lg w-full"
+            className="bg-primary py-3 px-10 rounded-md text-black font-bold text-lg w-full flex items-center justify-center"
           >
-            Submit
+            {isLoading ? <Loader2 className="animate-spin"/> : "Submit"} 
           </button>
         </form>
       </div>
